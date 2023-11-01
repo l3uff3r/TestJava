@@ -29,6 +29,7 @@
 
 package com.thealgorithms.datastructures.lists;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -37,7 +38,7 @@ public class RandomNode {
 
     private List<Integer> list;
     private int size;
-    private static Random rand = new Random();
+    private static Random rand = new SecureRandom();
 
     static class ListNode {
 
