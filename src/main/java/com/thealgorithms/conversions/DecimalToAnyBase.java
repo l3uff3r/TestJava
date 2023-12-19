@@ -1,5 +1,6 @@
 package com.thealgorithms.conversions;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -13,11 +14,11 @@ public class DecimalToAnyBase {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the decimal input below: ");
-        int decInput = Integer.parseInt(br.readLine());
+        int decInput = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
         System.out.println();
 
         System.out.println("Enter the base below: ");
-        int base = Integer.parseInt(br.readLine());
+        int base = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
         System.out.println();
 
         System.out.println("Decimal Input"

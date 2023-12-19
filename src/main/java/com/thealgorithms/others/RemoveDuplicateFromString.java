@@ -1,5 +1,6 @@
 package com.thealgorithms.others;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -10,7 +11,7 @@ public class RemoveDuplicateFromString {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String inpStr = br.readLine();
+        String inpStr = BoundedLineReader.readLine(br, 5_000_000);
 
         System.out.println("Actual string is: " + inpStr);
         System.out.println("String after removing duplicates: " + removeDuplicate(inpStr));
