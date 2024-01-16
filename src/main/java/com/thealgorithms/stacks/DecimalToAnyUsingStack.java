@@ -5,11 +5,11 @@ import java.util.Stack;
 public class DecimalToAnyUsingStack {
 
     public static void main(String[] args) {
-        assert convert(0, 2).equals("0");
-        assert convert(30, 2).equals("11110");
-        assert convert(30, 8).equals("36");
-        assert convert(30, 10).equals("30");
-        assert convert(30, 16).equals("1E");
+        assert "0".equals(convert(0, 2));
+        assert "11110".equals(convert(30, 2));
+        assert "36".equals(convert(30, 8));
+        assert "30".equals(convert(30, 10));
+        assert "1E".equals(convert(30, 16));
     }
 
     /**

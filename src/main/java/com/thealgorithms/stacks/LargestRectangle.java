@@ -29,7 +29,7 @@ public class LargestRectangle {
     }
 
     public static void main(String[] args) {
-        assert largestRectanglehistogram(new int[] {2, 1, 5, 6, 2, 3}).equals("10");
-        assert largestRectanglehistogram(new int[] {2, 4}).equals("4");
+        assert "10".equals(largestRectanglehistogram(new int[] {2, 1, 5, 6, 2, 3}));
+        assert "4".equals(largestRectanglehistogram(new int[] {2, 4}));
     }
 }

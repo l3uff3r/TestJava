@@ -9,11 +9,11 @@ package com.thealgorithms.strings;
 public class Rotation {
 
     public static void main(String[] args) {
-        assert rotation("abcdef", 2).equals("cdefab");
+        assert "cdefab".equals(rotation("abcdef", 2));
 
         char[] values = "abcdef".toCharArray();
         rotation(values, 2);
-        assert new String(values).equals("cdefab");
+        assert "cdefab".equals(new String(values));
     }
 
     /**
