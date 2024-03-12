@@ -1,5 +1,6 @@
 package com.thealgorithms.others;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -49,7 +50,7 @@ public class CRCAlgorithm {
         for (int i = 0; i < str.length(); i++) {
             p.add(Character.getNumericValue(str.charAt(i)));
         }
-        randomGenerator = new Random();
+        randomGenerator = new SecureRandom();
         correctMess = 0;
         wrongMess = 0;
         wrongMessCaught = 0;
