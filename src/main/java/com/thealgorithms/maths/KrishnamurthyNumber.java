@@ -1,10 +1,7 @@
 package com.thealgorithms.maths;
 
-/* This is a program to check if a number is a Krishnamurthy number or not.
-A number is a Krishnamurthy number if the sum of the factorials of the digits of the number is equal
-to the number itself. For example, 1, 2 and 145 are Krishnamurthy numbers. Krishnamurthy number is
-also referred to as a Strong number.
- */
+
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 
 public class KrishnamurthyNumber {
@@ -43,7 +40,7 @@ public class KrishnamurthyNumber {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter a number to check if it is a Krishnamurthy number: ");
-        int n = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
         if (isKMurthy(n)) {
             System.out.println(n + " is a Krishnamurthy number.");
         } else {
