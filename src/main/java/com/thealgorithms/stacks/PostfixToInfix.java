@@ -120,10 +120,10 @@ public class PostfixToInfix {
     }
 
     public static void main(String[] args) {
-        assert getPostfixToInfix("ABC+/").equals("(A/(B+C))");
-        assert getPostfixToInfix("AB+CD+*").equals("((A+B)*(C+D))");
-        assert getPostfixToInfix("AB+C+D+").equals("(((A+B)+C)+D)");
-        assert getPostfixToInfix("ABCDE^*/-").equals("(A-(B/(C*(D^E))))");
-        assert getPostfixToInfix("AB+CD^/E*FGH+-^").equals("((((A+B)/(C^D))*E)^(F-(G+H)))");
+        assert "(A/(B+C))".equals(getPostfixToInfix("ABC+/"));
+        assert "((A+B)*(C+D))".equals(getPostfixToInfix("AB+CD+*"));
+        assert "(((A+B)+C)+D)".equals(getPostfixToInfix("AB+C+D+"));
+        assert "(A-(B/(C*(D^E))))".equals(getPostfixToInfix("ABCDE^*/-"));
+        assert "((((A+B)/(C^D))*E)^(F-(G+H)))".equals(getPostfixToInfix("AB+CD^/E*FGH+-^"));
     }
 }

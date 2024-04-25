@@ -6,8 +6,8 @@ package com.thealgorithms.strings;
 public class ReverseString {
 
     public static void main(String[] args) {
-        assert reverse("abc123").equals("321cba");
-        assert reverse2("abc123").equals("321cba");
+        assert "321cba".equals(reverse("abc123"));
+        assert "321cba".equals(reverse2("abc123"));
     }
 
     /**

@@ -406,7 +406,7 @@ public class SinglyLinkedList implements Iterable<Integer> {
         SinglyLinkedList list = new SinglyLinkedList();
         assert list.isEmpty();
         assert list.size() == 0 && list.count() == 0;
-        assert list.toString().equals("");
+        assert "".equals(list.toString());
 
         /* Test insert function */
         list.insertHead(5);
@@ -414,7 +414,7 @@ public class SinglyLinkedList implements Iterable<Integer> {
         list.insertHead(10);
         list.insert(3);
         list.insertNth(1, 4);
-        assert list.toString().equals("10->7->5->3->1");
+        assert "10->7->5->3->1".equals(list.toString());
         System.out.println(list);
         /* Test search function */
         assert list.search(10) && list.search(5) && list.search(1) && !list.search(100);
@@ -426,7 +426,7 @@ public class SinglyLinkedList implements Iterable<Integer> {
         list.deleteHead();
         list.deleteNth(1);
         list.delete();
-        assert list.toString().equals("7->3");
+        assert "7->3".equals(list.toString());
         System.out.println(list);
         assert list.size == 2 && list.size() == list.count();
 
