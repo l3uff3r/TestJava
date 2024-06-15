@@ -1,5 +1,6 @@
 package com.thealgorithms.others;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,7 +20,7 @@ class PasswordGen {
     }
 
     static String generatePassword(int min_length, int max_length) {
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lower = "abcdefghijklmnopqrstuvwxyz";
