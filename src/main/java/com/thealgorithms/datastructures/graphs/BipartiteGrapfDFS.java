@@ -1,5 +1,6 @@
 package com.thealgorithms.datastructures.graphs;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -50,9 +51,9 @@ public class BipartiteGrapfDFS {
 
     public static void main(String[] args) throws IOException {
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(read.readLine().trim());
+        int t = Integer.parseInt(BoundedLineReader.readLine(read, 5_000_000).trim());
         while (t-- > 0) {
-            String[] S = read.readLine().trim().split(" ");
+            String[] S = BoundedLineReader.readLine(read, 5_000_000).trim().split(" ");
             int V = Integer.parseInt(S[0]);
             int E = Integer.parseInt(S[1]);
 
@@ -61,7 +62,7 @@ public class BipartiteGrapfDFS {
                 adj.add(new ArrayList<>());
             }
             for (int i = 0; i < E; i++) {
-                String[] s = read.readLine().trim().split(" ");
+                String[] s = BoundedLineReader.readLine(read, 5_000_000).trim().split(" ");
                 int u = Integer.parseInt(s[0]);
                 int v = Integer.parseInt(s[1]);
                 adj.get(u).add(v);
