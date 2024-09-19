@@ -1,5 +1,6 @@
 package com.thealgorithms.sorts;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +15,7 @@ public class BucketSort {
         int[] arr = new int[10];
 
         /* generate 10 random numbers from -50 to 49 */
-        Random random = new Random();
+        Random random = new SecureRandom();
         for (int i = 0; i < arr.length; ++i) {
             arr[i] = random.nextInt(100) - 50;
         }

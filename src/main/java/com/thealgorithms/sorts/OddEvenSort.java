@@ -1,5 +1,6 @@
 package com.thealgorithms.sorts;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 // https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort
@@ -8,7 +9,7 @@ public class OddEvenSort {
     public static void main(String[] args) {
         int[] arr = new int[100];
 
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         // Print out unsorted elements
         for (int i = 0; i < arr.length; ++i) {

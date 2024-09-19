@@ -1,5 +1,6 @@
 package com.thealgorithms.datastructures.lists;
 
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -286,7 +287,7 @@ public class SkipList<E extends Comparable<E>> {
         private final double probability;
 
         private static final double DEFAULT_PROBABILITY = 0.5;
-        private static final Random RANDOM = new Random();
+        private static final Random RANDOM = new SecureRandom();
 
         public BernoulliHeightStrategy() {
             this.probability = DEFAULT_PROBABILITY;
