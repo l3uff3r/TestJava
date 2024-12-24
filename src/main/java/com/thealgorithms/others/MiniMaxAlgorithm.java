@@ -1,5 +1,6 @@
 package com.thealgorithms.others;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -93,7 +94,7 @@ public class MiniMaxAlgorithm {
      */
     public static int[] getRandomScores(int size, int maxScore) {
         int[] randomScores = new int[(int) Math.pow(2, size)];
-        Random rand = new Random();
+        Random rand = new SecureRandom();
 
         for (int i = 0; i < randomScores.length; i++) {
             randomScores[i] = rand.nextInt(maxScore) + 1;

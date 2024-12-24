@@ -1,5 +1,6 @@
 package com.thealgorithms.sorts;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -10,7 +11,7 @@ public class BubbleSortRecursion implements SortAlgorithm {
     public static void main(String[] args) {
         Integer[] array = new Integer[10];
 
-        Random random = new Random();
+        Random random = new SecureRandom();
         /* generate 10 random numbers from -50 to 49 */
         for (int i = 0; i < array.length; ++i) {
             array[i] = random.nextInt(100) - 50;

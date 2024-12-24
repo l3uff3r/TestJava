@@ -1,6 +1,7 @@
 package com.thealgorithms.searches;
 
 import com.thealgorithms.devutils.searches.SearchAlgorithm;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -39,7 +40,7 @@ public class LinearSearch implements SearchAlgorithm {
 
     public static void main(String[] args) {
         // just generate data
-        Random r = new Random();
+        Random r = new SecureRandom();
         int size = 200;
         int maxElement = 100;
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).toArray(Integer[] ::new);
